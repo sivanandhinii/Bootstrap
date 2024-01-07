@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Anime Merchandise</title>
+</head>
+<style>  
+p{
+text-decoration: solid;
+  margin: 0 ;
+  border: none;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;text-align: center;
+   
+}
+.row1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+   
+}
+
+.column1 {
+    height: 30px;
+    width: 30px;
+ padding: 3px 3px 5px 5px;  
+ /* margin-right: 1px; */
+ margin-inline-start: 14px;
+ margin-bottom: 10px;
+    border: 0.1px solid #ddd;
+    font-size: 15px;
+     border-radius: 8px;align-self: flex-start;
+ margin-top: 5px;
+}
+.column {
+    flex: 1;
+    max-width: 235px;
+    margin: 5px;
+    padding: 0px;
+    border: px solid #ddd;
+    text-align: center;
+}
+.column2 {
+    flex: 1;  
+   height: 40px;
+    padding: 10px;
+    border: 1px solid #ddd;
+   
+}
+
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: smaller;
+}
+.search-bar {
+    display: flex;
+    height: 15px; 
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-bar button {
+    /* background-color: #333; */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icons i {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+    header {   
+        color: #23dae0;
+       background-color: rgb(43, 41, 41);
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }   
+        .icons i {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    
+    .left-icons,
+    .right-icons {
+        display: flex;
+    }
+    .right-icons a {
+        margin-right: 10px;
+        color: #23dae0;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .left-icons i,
+    .right-icons i {
+        margin-right: 10px;
+        color: #23dae0;
+        font-size: 15px;
+    }
+    
+    h3 {
+        margin: 0;
+        color: white;
+        flex-grow: 1;
+    }
+    marquee{
+        width: 50%;
+        color: #23dae0;
+        font-size: 15px;
+    }
+    
+   
+.image-container {
+    position: relative;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    transition: opacity 0.5s;
+}
+.image-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.wishlist-heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: rgb(56, 208, 219); /* Heart color */
+    font-size: 24px;
+}
+
+.wishlist-heart.clicked {
+    color: #ff4500; /* Change color when clicked */
+}
+#image2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.image-container:hover #image1 {
+    opacity: 0;
+}
+
+.image-container:hover #image2 {
+    opacity: 1;
+}
+
+    
+</style>
+
+<body>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <header id="myHeader">
+      <div class="left-icons">
+          <i class="fab fa-reddit-alien" style="color: #23dae0;"></i>
+          <i class="fab fa-instagram" style="color: #23dae0;"></i>
+          <i class="fab fa-youtube" style="color: #23dae0;"></i>
+      </div>
+      <h3><marquee>7.5% Cashback on all Prepais Orders</marquee></h3>
+      <div class="right-icons">
+          <a href="#" >Track Oreders</a>
+          <a href="#" >Coupens</a>
+          <a href="#" >Need Help</a>
+      </div>
+  </header>
+
+  <!-- 123 -->
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+    style="height:15 px;background-color: #fff;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <div class="container-fluid">
+        <nav class="navbar navbar-light bg">
+          <div class="container">
+
+          </div>
+        </nav>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Top Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Over sized Tee</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Hawaii Shirts</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Manga</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Wall Decor</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Cosplay</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop by Anime
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Over sized Tee</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Hawaii Shirts</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Manga</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Wall Decor</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Cosplay</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop by Product
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Over sized Tee</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Hawaii Shirts</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Manga</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Wall Decor</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Cosplay</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Combo
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Hoodies</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Over sized Tee</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Hawaii Shirts</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Manga</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Wall Decor</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Cosplay</a></li>
+              </ul>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4"><img src="https://comicsense.b-cdn.net/storage/2022/05/comic-sense-logo_minimal.png"
+          style="height: 37px;"></span>
+    </a>
+     <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button><a href="sample.html"><i class="fa-solid fa-user" style="color: #23dae0;background-color: none;"></i></a></button>
+        </div>
+
+        <div class="icons">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-shopping-cart"></i>
+        </div>
+
+    </ul>
+  </header><br><br>
+
+  <!-- Carosel -->
+
+  <!-- Image -->
+ <h2 style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"><b>Oversized Tees's</b></h2>
+  <div class="row">
+    <div class="column">
+        <h2><div class="image-container">
+          <div class="wishlist-heart" onclick="toggleWishlist(this)">
+              <i class="far fa-heart"></i>
+          </div> <img src="https://comicsense.b-cdn.net/storage/2023/12/geto-hoodie-listing5-scaled.jpg"
+            style="height: 290px;width: 230px;"></h2>
+            <p>Drop Down Shoulder</p>
+            <div class="row1" style="align-items: center;">
+              <div class="column1">
+                  S              
+              </div>
+              <div class="column1">
+                 M             
+              </div>
+              <div class="column1">
+                 L
+              </div>
+              <div class="column1">
+                 XL              
+              </div>            
+          </div>
+          <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+        <p><div class="column2">
+          
+          <p >₹849.00</p>
+      </div></p>
+    </div>
+    <div class="column">
+      <h2><div class="image-container">
+        <div class="wishlist-heart" onclick="toggleWishlist(this)">
+            <i class="far fa-heart"></i>
+        </div> <img src=" https://comicsense.b-cdn.net/storage/2023/12/gojo_walldecal1.jpg "
+        style="height: 290px;width: 230px;"></h2>
+          <p>Gojo Over Sized Tee</p>
+          <div class="row1" style="align-items: center;">
+            <div class="column1">
+                S              
+            </div>
+            <div class="column1">
+               M             
+            </div>
+            <div class="column1">
+               L
+            </div>
+            <div class="column1">
+               XL              
+            </div>            
+        </div>
+        <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+      <p><div class="column2">
+        
+        <p >₹899.00</p>
+    </div></p>
+  </div>
+  <div class="column">
+    <h2><div class="image-container">
+      <div class="wishlist-heart" onclick="toggleWishlist(this)">
+          <i class="far fa-heart"></i>
+      </div> <img src="https://comicsense.b-cdn.net/storage/2023/11/bleach_hoodie_listing1_hitanshi-scaled.jpg"
+      style="height: 290px;width: 230px;"></h2>
+        <p>Drop Down Shoulder</p>
+        <div class="row1" style="align-items: center;">
+          <div class="column1">
+              S              
+          </div>
+          <div class="column1">
+             M             
+          </div>
+          <div class="column1">
+             L
+          </div>
+          <div class="column1">
+             XL              
+          </div>            
+      </div>
+      <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+    <p><div class="column2">
+      
+      <p >₹999.00</p>
+  </div></p>
+</div>
+<div class="column">
+  <h2> <div class="image-container">
+    <div class="wishlist-heart" onclick="toggleWishlist(this)">
+        <i class="far fa-heart"></i>
+    </div><img src="https://comicsense.b-cdn.net/storage/2023/11/king-of-hell-hoodie-listing-vasu-4-scaled.jpg"
+    style="height: 290px;width: 230px;"></h2>
+      <p>King Hell Over Sized Tee</p>
+      <div class="row1" style="align-items: center;">
+        <div class="column1">
+            S              
+        </div>
+        <div class="column1">
+           M             
+        </div>
+        <div class="column1">
+           L
+        </div>
+        <div class="column1">
+           XL              
+        </div>            
+    </div>
+    <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+  <p><div class="column2">
+    
+    <p >₹599.00</p>
+</div></p>
+</div>
+<div class="column">
+  <h2><div class="image-container">
+    <div class="wishlist-heart" onclick="toggleWishlist(this)">
+        <i class="far fa-heart"></i>
+    </div> <img src=" https://comicsense.b-cdn.net/storage/2023/11/strongest06_jjk_tee_listing6_hitanshi-scaled.jpg "
+    style="height: 290px;width: 230px;"></h2>
+      <p>Jujutsu Purple Tee</p>
+      <div class="row1" style="align-items: center;">
+        <div class="column1">
+            S              
+        </div>
+        <div class="column1">
+           M             
+        </div>
+        <div class="column1">
+           L
+        </div>
+        <div class="column1">
+           XL              
+        </div>            
+    </div>
+    <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+  <p><div class="column2">
+    
+    <p >₹1999.00</p>
+</div></p>
+</div>
+<div class="column">
+  <h2><div class="image-container">
+    <div class="wishlist-heart" onclick="toggleWishlist(this)">
+        <i class="far fa-heart"></i>
+    </div> <img src=" https://comicsense.b-cdn.net/storage/2023/10/gintama_professionalcosplayer_tee_listing2_hitanshi-scaled.jpg "
+    style="height: 290px;width: 230px;"></h2>
+      <p>Professiona Cosplayer</p>
+      <div class="row1" style="align-items: center;">
+        <div class="column1">
+            S              
+        </div>
+        <div class="column1">
+           M             
+        </div>
+        <div class="column1">
+           L
+        </div>
+        <div class="column1">
+           XL              
+        </div>            
+    </div>
+    <i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"><i class="fa-solid fa-star" style="color: #cf2020;"></i></i></i></i></i>
+  <p><div class="column2">
+    
+    <p >₹1999.00</p>
+</div></p>
+</div>
+</div>
+
+  <!-- Image2 -->
+ <br><br>
+  <h2 style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"><b>Beenies</b></h2>
+  <div class="row">
+    <div class="column">
+        <h2><div class="image-container">
+          <img src="https://comicsense.b-cdn.net/storage/2024/01/aot_beanie_listing3-1-scaled.jpg" alt="Image 1" class="image" id="image1">
+          <img src="https://comicsense.b-cdn.net/storage/2024/01/aot_beanie_listing1-1-scaled.jpg" alt="Image 2" class="image" id="image2">
+      </div></h2>
+            <p>Jojo</p>
+            <div class="row1" style="align-items: center;">
+                        
+          </div>
+        <p><div class="column2">
+          
+          <p >₹849.00</p>
+      </div></p>
+    </div>
+    <div class="column">
+      <h2> <div class="image-container">
+        <img src="https://comicsense.b-cdn.net/storage/2024/01/bleach_beanie_listing3-scaled.jpg" alt="Image 1" class="image" id="image1">
+        <img src="https://comicsense.b-cdn.net/storage/2024/01/bleach_beanie_listing2-scaled.jpg" alt="Image 2" class="image" id="image2">
+    </div></h2>
+          <p>Demon</p>
+          <div class="row1" style="align-items: center;">
+                      
+        </div>
+      <p><div class="column2">
+        
+        <p >₹849.00</p>
+    </div></p>
+  </div>
+  <div class="column">
+    <h2> <div class="image-container">
+      <img src="https://comicsense.b-cdn.net/storage/2024/01/jojo_beanie_listing1-1-scaled.jpg" alt="Image 1" class="image" id="image1">
+      <img src="https://comicsense.b-cdn.net/storage/2024/01/jojo_beanie_listing3-1-scaled.jpg" alt="Image 2" class="image" id="image2">
+  </div></h2>
+        <p>Wings of Freedom</p>
+        <div class="row1" style="align-items: center;">
+                    
+      </div>
+    <p><div class="column2">
+      
+      <p >₹849.00</p>
+  </div></p>
+</div>
+
+<div class="column">
+  <h2> <div class="image-container">
+    <img src="https://comicsense.b-cdn.net/storage/2023/12/berserk_beanie_lsiting2_hitanshi-scaled.jpg" alt="Image 1" class="image" id="image1">
+    <img src="https://comicsense.b-cdn.net/storage/2023/12/berserk_beanie_lsiting1_hitanshi-scaled.jpg" alt="Image 2" class="image" id="image2">
+</div></h2>
+      <p>Soul Soceity</p>
+      <div class="row1" style="align-items: center;">
+                  
+    </div>
+  <p><div class="column2">
+    
+    <p >₹849.00</p>
+</div></p>
+
+</div><div class="column">
+  <h2> <div class="image-container">
+    <img src="https://comicsense.b-cdn.net/storage/2023/12/sukuna_beanie_lsiting1_hitanshi-scaled.jpg" alt="Image 1" class="image" id="image1">
+    <img src="https://comicsense.b-cdn.net/storage/2023/12/sukuna_beanie_lsiting2_hitanshi-scaled.jpg" alt="Image 2" class="image" id="image2">
+</div></h2>
+      <p>king of Curses</p>
+      <div class="row1" style="align-items: center;">
+                  
+    </div>
+  <p><div class="column2">
+    
+    <p >₹849.00</p>
+</div></p>
+</div>
+
+</div></p>
+</div>
+</div>
+
+  <!-- Two Tabs --><br><br>
+  <h2 style="text-align: center;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"><b>Top Anime's</b></h2>
+
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/onepiece_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/11/chainsaw_catega.jpg" style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/jujutsu_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/aot_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+
+    </div>
+
+    <div class="row align-items-center">
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/demonslayer_catega_comicsense.jpg
+      " style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/dbz_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/tokyo_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+      <div class="col">
+        <img src="https://comicsense.b-cdn.net/storage/2022/08/senpai_catega_comicsense.jpg"
+          style="height: 200px;width: 300px;">
+      </div>
+      <div class="container">
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <br><br>
+  <!-- Footer -->
+
+  <footer class="bg-dark text-center text-lg-start text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Original Artworks</h5>
+
+
+          <p>Designs made by artists from around the world and not google.</p>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Ratings</h5>
+
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Since 2016</h5>
+          <p>Making sugoi anime merch since 2016.
+            Watching anime since birth (kind of).</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Ready to Ship</h5>
+          <p>One of the fastest shipping time in the industry as all products are already in stock and not made on
+            order.
+          </p>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">MAIN LINKS</h5>
+
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#!" class="text-white">Bestsellers</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Gift Combos</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Cleareance Zone</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Coupons & Offers</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">SIDE LINKS</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">About Us</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">FAQ</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Terms & Condition</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Also Available on</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white">Amazon</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Flipcart</a>
+            </li>
+            <li>
+              <a href="#!" class="text-white">Myntra</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+
+
+              <a href="#!" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+
+
+              <a href="#!" class="text-white"><i class="fa-brands fa-reddit-alien"></i></a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      All artworks posted on this website is intended as fan art and is not purported to be official merchandise unless
+      indicated otherwise. If you have any issues regarding the artwork do write in to us at care@comicsense.xyz.
+
+      Copyright © 2023 ComicSense
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  </div>
+  <!-- End of .container -->
+  <script src="script.js"></script>
+</body>
+
+</html>
